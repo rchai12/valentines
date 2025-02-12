@@ -22,7 +22,11 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Valentine\'s Images'),
+          backgroundColor: const Color.fromARGB(255, 186, 149, 182), // Set title background color
           bottom: TabBar(
+            indicatorColor: Colors.orange, // Set tab indicator color
+            labelColor: const Color.fromARGB(255, 255, 255, 255), // Set selected tab text color
+            unselectedLabelColor: Colors.black54, // Set unselected tab text color
             tabs: [
               Tab(text: 'Heartbeat'),
               Tab(text: 'Floating Hearts'),
