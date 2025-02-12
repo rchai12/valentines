@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +16,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  void _showPopupImage() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          child: Image.asset('assets/images/rose.gif'),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -48,6 +67,11 @@ class MyHomePage extends StatelessWidget {
               height: double.infinity,),
             ),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _showPopupImage,
+          child: Icon(Icons.image),
+          backgroundColor: Colors.orange,
         ),
       ),
     );
