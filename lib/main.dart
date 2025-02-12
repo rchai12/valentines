@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Valentine\' Images'),
+          title: Text('Valentine\'s Images'),
           bottom: TabBar(
             tabs: [
               Tab(text: 'Heartbeat'),
